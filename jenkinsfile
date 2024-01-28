@@ -1,9 +1,9 @@
 pipeline{
-	agent{label 'master'}
+	agent{label master}
 	stages{
 		stage('Checkout'){
 			steps{
-				git branch: 'master', url: 'https://github.com/geordie12311/ansible-jenkins.git'
+				git branch: master, url: 'https://github.com/geordie12311/ansible-jenkins.git'
 			}
 		}
     		stage('Setup'){
