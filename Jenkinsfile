@@ -10,7 +10,7 @@ pipeline{
     		stage('Test'){
       			steps{
 				 sh '''#!/bin/bash
-				     source myprojectenv/bin/activate	
+				     source env/bin/activate	
                 		     python -m unittest
 				     '''
                			}
