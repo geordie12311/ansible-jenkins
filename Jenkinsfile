@@ -1,12 +1,7 @@
 pipeline{
-	agent{label 'master'}
+	agent any
 	stages{
-		stage('Checkout'){
-			steps{
-				git branch: 'master', url: 'https://github.com/geordie12311/ansible-jenkins.git'
-			}
-		}
-    		stage('Setup'){
+  		stage('Setup'){
       			steps{
 				sh 'chmod +x install.sh'
         			sh './install.sh'
